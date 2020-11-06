@@ -159,7 +159,7 @@ class _AgentScreenLoginState extends State<AgentScreenLogin> {
                     height: 10,
                   ),
                   Text(
-                    "EssenKiosk",
+                    "efiJuma Service Provider",
                     style: TextStyle(
                         fontFamily: 'Georgia',
                         fontSize: 20,
