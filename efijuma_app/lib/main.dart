@@ -1,6 +1,7 @@
 import 'package:efijuma_app/AgentScreens.dart';
 import 'package:efijuma_app/BuyerScreens.dart';
 import 'package:efijuma_app/BuyerSearch.dart';
+
 // import 'package:efijuma_app/TransportScreens.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/cupertino.dart';
@@ -101,7 +102,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                         width: 30.0,
                                         color: Colors.green),
                                     Text(
-                                        "Explore an optimized collection of harvests")
+                                        "Find efiJuma service providers in your neighbourhood")
                                   ])),
                         ),
                       ),
@@ -163,7 +164,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                         height: 4.0,
                                         width: 30.0,
                                         color: Colors.green),
-                                    Text("Enter Harvest Upload Console")
+                                    Text("Enter Service Provider Console")
                                   ])),
                         ),
                       ),

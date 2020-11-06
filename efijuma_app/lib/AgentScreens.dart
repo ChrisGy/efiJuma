@@ -110,7 +110,7 @@ class _AgentScreenLoginState extends State<AgentScreenLogin> {
                 ));
               }
 
-              if (pWordInput != "" && usernameInput != "") {
+              if (pWordInput != "agent1" && usernameInput != "pass") {
                 //todo: Rewrite logic for login screen
                 //EssenKiosk Agent Password
                 Scaffold.of(context).showSnackBar(SnackBar(
