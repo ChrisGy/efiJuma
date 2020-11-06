@@ -1,7 +1,7 @@
-import 'package:flutter/material.dart';
-import 'GeoLocationClass.dart' as GeoLoc;
-import 'DbQueries.dart' as dbquery;
 import 'package:flutter/animation.dart';
+import 'package:flutter/material.dart';
+
+import 'GeoLocationClass.dart' as GeoLoc;
 
 class BuyerMainSearch extends StatefulWidget {
   @override
@@ -65,47 +65,47 @@ class _BuyerMainSearchState extends State<BuyerMainSearch>
             ])),
         body: Center(
             child: Column(
-          children: [
-            Text(responseText),
-            RaisedButton(
-              child: Text("test1"),
-              onPressed: () async {
-                String current = await GeoLoc.getCurrentLocation();
-                double currentLat = double.parse(current.split(",")[0]);
-                double currentLng = double.parse(current.split(",")[1]);
-                double loc = await GeoLoc.geolocator.distanceBetween(
-                  currentLat,
-                  currentLng,
-                  6.6756377,
-                  -1.5699161,
-                );
-                print(loc);
-              },
-            ),
-            RaisedButton(
-              child: Text("animation forward"),
-              onPressed: () {
-                setState(() {
-                  _playAnimation.forward();
-                });
-              },
-            ),
-            RaisedButton(
-              child: Text("animation reverse"),
-              onPressed: () {
-                setState(() {
-                  _playAnimation.value < 0.49
-                      ? _playAnimation.forward()
-                      : _playAnimation.reverse();
-                });
-              },
-            ),
-            AnimatedIcon(
-              icon: AnimatedIcons.arrow_menu,
-              progress: _playAnimation,
-            ),
-            Text(animVal)
-          ],
-        )));
+              children: [
+                Text(responseText),
+                RaisedButton(
+                  child: Text("test1"),
+                  onPressed: () async {
+                    String current = await GeoLoc.getCurrentLocation();
+                    double currentLat = double.parse(current.split(",")[0]);
+                    double currentLng = double.parse(current.split(",")[1]);
+                    double loc = await GeoLoc.geolocator.distanceBetween(
+                      currentLat,
+                      currentLng,
+                      6.6756377,
+                      -1.5699161,
+                    );
+                    print(loc);
+                  },
+                ),
+                RaisedButton(
+                  child: Text("animation forward"),
+                  onPressed: () {
+                    setState(() {
+                      _playAnimation.forward();
+                    });
+                  },
+                ),
+                RaisedButton(
+                  child: Text("animation reverse"),
+                  onPressed: () {
+                    setState(() {
+                      _playAnimation.value < 0.49
+                          ? _playAnimation.forward()
+                          : _playAnimation.reverse();
+                    });
+                  },
+                ),
+                AnimatedIcon(
+                  icon: AnimatedIcons.arrow_menu,
+                  progress: _playAnimation,
+                ),
+                Text(animVal)
+              ],
+            )));
   }
 }
