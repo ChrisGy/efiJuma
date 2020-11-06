@@ -1,8 +1,6 @@
 import 'package:efijuma_app/AgentScreens.dart';
-import 'package:efijuma_app/BuyerScreens.dart';
 import 'package:efijuma_app/BuyerSearch.dart';
-
-// import 'package:efijuma_app/TransportScreens.dart';
+import 'package:efijuma_app/SelectionScreen.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -84,7 +82,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             Navigator.push(
                               this.context,
                               MaterialPageRoute(
-                                  builder: (context) => BuyerScreenHome()),
+                                  builder: (context) => SelectionScreen()),
                             );
                           },
                           child: Container(
@@ -187,13 +185,6 @@ class _HomeScreenState extends State<HomeScreen> {
                   ],
                 ),
                 Divider(),
-                RaisedButton(
-                  child: Text("jump to search page for tests"),
-                  onPressed: () => Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => BuyerMainSearch())),
-                ),
                 Padding(
                   padding: EdgeInsets.all(100),
                 )

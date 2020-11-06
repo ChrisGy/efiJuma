@@ -75,7 +75,7 @@ class _ManageFarmDataState extends State<ManageMembers> {
           key: _scaffoldKey,
           appBar: AppBar(
             title: Text(
-              "Harvest Upload Form",
+              "Your Profile",
               style: TextStyle(fontSize: 25),
             ),
             backgroundColor: Colors.green,
@@ -89,13 +89,7 @@ class _ManageFarmDataState extends State<ManageMembers> {
             padding: EdgeInsets.symmetric(horizontal: 10),
             child: Column(
               children: <Widget>[
-                Center(
-                    heightFactor: 1.4,
-                    child: Text(
-                      "The fields marked * are required.\nTap the Submit button at the bottom of\n the screen to complete the upload.",
-                      style:
-                          TextStyle(fontSize: 16, fontStyle: FontStyle.italic),
-                    )),
+
                 Divider(
                   color: Colors.white,
                 ),
@@ -105,9 +99,10 @@ class _ManageFarmDataState extends State<ManageMembers> {
                   decoration: InputDecoration(
                     border: UnderlineInputBorder(),
                     filled: true,
+                    enabled: false,
                     icon: Icon(Icons.person),
                     hintText: "(surname), (other names)",
-                    labelText: "Farmer's name",
+                    labelText: "Mr. John Smith",
                   ),
                 ),
                 Divider(
@@ -124,52 +119,24 @@ class _ManageFarmDataState extends State<ManageMembers> {
                     filled: true,
                     icon: Icon(Icons.local_phone),
                     //hintText: "",
-                    labelText: 'FarmerID/Phone *',
+                    labelText: '+233 123123 321',
+                    enabled: false,
                   ),
                 ),
                 Divider(
                   color: Colors.white,
                 ),
                 TextFormField(
-                  controller: foodClassController,
-                  textCapitalization: TextCapitalization.words,
-                  decoration: InputDecoration(
-                    border: UnderlineInputBorder(),
-                    filled: true,
-                    icon: Icon(Icons.library_books),
-                    hintText: "Eg; Cassava, Tomato, Rice etc...",
-                    labelText: 'Class of Food *',
-                  ),
-                ),
-                Divider(
-                  color: Colors.white,
-                ),
-                TextFormField(
-                  keyboardType: TextInputType.number,
-                  controller: priceController,
-                  textCapitalization: TextCapitalization.words,
-                  decoration: InputDecoration(
-                    border: UnderlineInputBorder(),
-                    filled: true,
-                    icon: Icon(Icons.monetization_on),
-                    prefixText: "GHC",
-                    suffixText: "per kg",
-                    labelText: 'Pricing per kg *',
-                  ),
-                ),
-                Divider(
-                  color: Colors.white,
-                ),
-                TextFormField(
+                  enabled: false,
                   controller: qualityController,
                   keyboardType: TextInputType.number,
                   textCapitalization: TextCapitalization.words,
                   decoration: InputDecoration(
                     border: UnderlineInputBorder(),
                     filled: true,
-                    icon: Icon(Icons.grade),
+                    icon: Icon(Icons.calendar_today_rounded),
                     hintText: "1 (Poor) - 5 (Excellent)",
-                    labelText: 'Quality Grade ',
+                    labelText: 'Joined on: 05-Nov-2020',
                   ),
                 ),
                 Divider(
@@ -184,17 +151,18 @@ class _ManageFarmDataState extends State<ManageMembers> {
                     filled: true,
                     icon: Icon(Icons.location_on),
                     hintText: "Manually enter or tap button to use GPS",
-                    labelText: 'Harvest Location',
+                    labelText: 'Kumasi, Ghana',
                     enabled: false,
                     suffix: Builder(
-                      builder: (context) => FlatButton(
-                        child: Text("Get Location",
-                            style: TextStyle(color: Colors.white)),
-                        onPressed: () async {
-                          String a;
-                          a = await getCurrentLocation();
-                          setState(() {
-                            farmLocationController.text = a.toString();
+                      builder: (context) =>
+                          FlatButton(
+                            child: Text("Get Location",
+                                style: TextStyle(color: Colors.white)),
+                            onPressed: () async {
+                              String a;
+                              a = await getCurrentLocation();
+                              setState(() {
+                                farmLocationController.text = a.toString();
                           });
                         },
                         materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
@@ -204,7 +172,7 @@ class _ManageFarmDataState extends State<ManageMembers> {
                   ),
                 ),
                 Padding(padding: EdgeInsets.symmetric(vertical: 10)),
-                Container(
+                /*Container(
                   child: Column(
                     children: <Widget>[
                       Text(
@@ -248,8 +216,8 @@ class _ManageFarmDataState extends State<ManageMembers> {
                     ],
                   ),
                   padding: EdgeInsets.symmetric(vertical: 0),
-                ),
-                _camWidget,
+                ),*/
+                /*_camWidget,
                 //TODO: remake RaisedButton into Builder
                 RaisedButton(
                   //Submit button
@@ -327,7 +295,7 @@ class _ManageFarmDataState extends State<ManageMembers> {
                     ],
                   ),
                 ),
-                RaisedButton(onPressed: () {}),
+                RaisedButton(onPressed: () {}),*/
               ],
             ),
           )),

@@ -40,12 +40,14 @@ class _ProviderHomeState extends State<ProviderHome> {
                     if (snapshot.connectionState != ConnectionState.done)
                       return CircularProgressIndicator();
                     else {
+                      print(snapshot.data);
                       List<Offer> offerList = [];
-                      snapshot.data.forEach((offer) {
+                      snapshot.data.forEach((offerKey, offerVal) {
+                        print(offerKey);
                         offerList.add(Offer(
-                          buyerName: offer['buyerName'],
-                          buyerNumber: offer['buyerNumber'],
-                          service: offer['service'],
+                          buyerName: snapshot.data[offerKey]['buyerName'],
+                          buyerNumber: snapshot.data[offerKey]['buyerNumber'],
+                          service: snapshot.data[offerKey]['service'],
                         ));
                       });
                       if (offerList.isEmpty) return Text("No offers");
@@ -72,6 +74,7 @@ class Offer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
+      onTap: () async => await urlOpen.launch("tel://${this.buyerNumber}"),
       leading: Icon(Icons.person_pin ?? ""),
       title: Text(this.buyerNumber ?? ""),
       trailing: Text(this.buyerName ?? ""),
