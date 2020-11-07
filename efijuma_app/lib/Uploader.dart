@@ -1,9 +1,9 @@
 import 'firebaseCRUD.dart' show keyPush;
-import 'package:firebase_storage/firebase_storage.dart';
+// import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class Uploader extends StatelessWidget {
+/*class Uploader extends StatelessWidget {
   Uploader({Key key, this.task, this.dBString, this.pushKey}) : super(key: key);
   final String dBString;
   final StorageUploadTask task;
@@ -115,4 +115,4 @@ class Uploader extends StatelessWidget {
       },
     );
   }
-}
+}*/

@@ -36,27 +36,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.1.0-nullsafety.1"
-  cloud_functions:
-    dependency: "direct main"
-    description:
-      name: cloud_functions
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "0.5.0"
-  cloud_functions_platform_interface:
-    dependency: transitive
-    description:
-      name: cloud_functions_platform_interface
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "1.1.0"
-  cloud_functions_web:
-    dependency: transitive
-    description:
-      name: cloud_functions_web
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "1.1.0"
   collection:
     dependency: transitive
     description:
@@ -99,13 +78,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "5.2.1"
-  file_picker:
-    dependency: "direct main"
-    description:
-      name: file_picker
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "1.4.3+1"
   firebase:
     dependency: transitive
     description:
@@ -114,7 +86,7 @@ packages:
     source: hosted
     version: "7.3.2"
   firebase_core:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: firebase_core
       url: "https://pub.dartlang.org"
@@ -138,20 +110,6 @@ packages:
     dependency: "direct main"
     description:
       name: firebase_database
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "3.1.6"
-  firebase_messaging:
-    dependency: "direct main"
-    description:
-      name: firebase_messaging
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "5.1.8"
-  firebase_storage:
-    dependency: "direct main"
-    description:
-      name: firebase_storage
       url: "https://pub.dartlang.org"
     source: hosted
     version: "3.1.6"

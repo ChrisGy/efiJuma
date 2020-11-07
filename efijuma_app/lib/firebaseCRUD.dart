@@ -3,23 +3,23 @@ import 'dart:io';
 import 'package:efijuma_app/CustomLists.dart' show CustomListItem;
 import 'package:efijuma_app/GeoLocationClass.dart' as GeoLoc;
 import 'package:firebase_database/firebase_database.dart';
-import 'package:firebase_storage/firebase_storage.dart';
+// import 'package:firebase_storage/firebase_storage.dart';//
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:path/path.dart' as Path;
 import 'package:url_launcher/url_launcher.dart' as UrlOpen;
 
-StorageUploadTask getHarvestUploadTask(File input) {
+/*StorageUploadTask getHarvestUploadTask(File input) {
   StorageUploadTask _ = storage
       .ref()
       .child("harvests/images/${Path.basename(input.path)}")
       .putFile(input);
 
   return _;
-}
+}*/
 
 final rootRef = FirebaseDatabase.instance.reference();
-FirebaseStorage storage = new FirebaseStorage();
+// FirebaseStorage storage = new FirebaseStorage();
 
 Future<void> writeData(String mkey, dynamic value, String path) async {
   //implement a push here
@@ -58,14 +58,14 @@ void deleteData(String path) {
   rootRef.child(path).remove();
 }
 
-Future<String> uploadFile(File file, String pathStr) async {
+/*Future<String> uploadFile(File file, String pathStr) async {
   StorageReference storageRef = storage.ref().child(
       "$pathStr/${Path.basename(file.path)}"); //FirebaseStorage.instance.ref();
   // final StorageUploadTask uploadTask = storageRef.putFile(file);
   final String dLoadURL = await storageRef.getDownloadURL();
   return dLoadURL ??
       'https://firebasestorage.googleapis.com/v0/b/essenkiosk1.appspot.com/o/harvests%2Fimages%2FdefaultHarvestImage.png?alt=media&token=a13ed895-10ac-4f11-97d1-a6d24f07ca9b';
-}
+}*/
 
 ///////////////////////// Classes //////////////////////////
 //ignore:must_be_immutable
