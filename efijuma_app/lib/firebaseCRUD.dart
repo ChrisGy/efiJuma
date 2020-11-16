@@ -1,4 +1,3 @@
-import 'dart:io';
 
 import 'package:efijuma_app/CustomLists.dart' show CustomListItem;
 import 'package:efijuma_app/GeoLocationClass.dart' as GeoLoc;
@@ -6,7 +5,6 @@ import 'package:firebase_database/firebase_database.dart';
 // import 'package:firebase_storage/firebase_storage.dart';//
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:path/path.dart' as Path;
 import 'package:url_launcher/url_launcher.dart' as UrlOpen;
 
 /*StorageUploadTask getHarvestUploadTask(File input) {

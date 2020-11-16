@@ -1,9 +1,9 @@
-import 'firebaseCRUD.dart' show FarmHarvest;
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import 'BuyerSearch.dart';
+import 'firebaseCRUD.dart' show FarmHarvest;
 
 class HarvestList {
   List<FarmHarvest> harvestList;

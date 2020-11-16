@@ -1,8 +1,9 @@
 import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
+
 import 'GeoLocationClass.dart';
-import 'Uploader.dart';
 import 'firebaseCRUD.dart' as crud;
 
 class ManageMembers extends StatefulWidget {
